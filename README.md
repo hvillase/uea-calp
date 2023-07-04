@@ -16,3 +16,7 @@ Prof. Hernani Villaseñor Ramírez
 ## Semana 10
 ## Semana 11
 ## Semana 12
+### Software
+SuperCollider 
+Hydra  
+Audacity  
