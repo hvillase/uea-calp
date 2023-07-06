@@ -1,6 +1,5 @@
 # UEA Creación audiovisual
-Creación audiovisual con lenguajes de programación en el contexto de fiesta
-Taller de creción audiovisual
+Creación audiovisual con lenguajes de programación  
 UAM Lerma
 Prof. Hernani Villaseñor Ramírez
 ## Evaluación
