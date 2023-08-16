@@ -18,7 +18,8 @@ Audiovisual 1
 ## Semana 11
 ## Semana 12
 ### Software
-SuperCollider   
-Hydra  
-Audacity  
-Gimp  
+[SuperCollider](https://supercollider.github.io/)  
+[Hydra](https://hydra.ojack.xyz/)  
+[Audacity](https://www.audacityteam.org/download/)  
+[Gimp](https://www.gimp.org/)  
+[Pulsar](https://pulsar-edit.dev/)  
