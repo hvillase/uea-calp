@@ -7,7 +7,10 @@ Prof. Hernani Villaseñor Ramírez
 Introducción a la programación creativa con SuperCollider  
 ## Semana 2
 Audiovisual 1  
+Live Coding  
 ## Semana 3
+Audiovisual 2  
+Live Coding en México  
 ## Semana 4
 ## Semana 5
 ## Semana 6
