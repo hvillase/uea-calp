@@ -13,16 +13,17 @@ s.freqscope;
 // SynthDef
 
 (
-SynthDef(\misinte, {|frec=440, amp=0.5|
-	var sen, env;
+SynthDef(\misinte, {|frec=440, pan=0, at=0.1, rel=0.1, amp=0.5|
+	var sen, paneo, env;
 	sen=SinOsc.ar(frec, 0, amp);
-	env=EnvGen.kr(Env.new([0,1,0],[0.1,0.1]),doneAction:2);
-	Out.ar(0, sen*env)
+	paneo=Pan2.ar(sen, pan);
+	env=EnvGen.kr(Env.new([0,1,0],[at,rel]),doneAction:2);
+	Out.ar(0, paneo*env)
 }).add
 );
 
 // Llamar a un SynthDef
-a=Synth(\misinte,[\frec, rrand(550,780)]);
+a=Synth(\misinte,[\frec, rrand(550,780), \pan, rrand(-1.0,1.0)]);
 
 // liberar un Synth
 a.free;
