@@ -15,6 +15,7 @@ Live Coding en México
 ## Semana 5
 ## Semana 6
 ## Semana 7
+SampleTexto
 ## Semana 8
 ## Semana 9
 ## Semana 10
@@ -26,3 +27,4 @@ Live Coding en México
 [Audacity](https://www.audacityteam.org/download/)  
 [Gimp](https://www.gimp.org/)  
 [Pulsar](https://pulsar-edit.dev/)  
+[SampleTexto](https://github.com/hvillase/sampletexto)
