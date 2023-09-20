@@ -35,16 +35,29 @@
 	\at, 0.01, \rel, 0.01
 ))
 );
+
+(
+~son1 = Pdef(\son1, Pbind(\instrument, \audio,
+	\dur, Pseq([0.25, 0.125, 0.125], inf),
+	\sus, Pseq([0.04, 0.02], inf),
+	\rel, Pseq([0.2, 0.1, 0.01, 0.02], inf),
+	\rate, Pseq([1, 1.5, 1, 1, 1.8], inf),
+	\sp, Pseq([0.1, 0.5, 0.75, 0.1, Pn(0.2, 4)], inf),
+	\amp, 0.7
+))
+);
 );
 
 ~sec1.play.quant(4);
 ~sec2.play.quant(4);
 ~sec3.play.quant(4);
 ~sec4.play.quant(4);
+~son1.play.quant(4);
 
 ~sec1.stop;
 ~sec2.stop;
 ~sec3.stop;
 ~sec4.stop;
+~son1.stop;
 
 s.quit;

@@ -1,4 +1,4 @@
-// SynthDefs
+// SynthDefs de sintesis
 s.boot;
 
 (

@@ -2,6 +2,8 @@
 // 1 cargar sonidos en un buffer
 // 2 colocar la ruta donde está tu sonido para que funcione
 
+s.boot;
+
 b = Buffer.read(s, "/home/hernani/uea-calp/clase-6/media/sonido2.wav");
 
 (
@@ -15,4 +17,4 @@ SynthDef(\audio, {|rate=1, sp=0, at=0.001, sus=1, rel=0.001, pan=0, amp=1, out=0
 				}).add;
 );
 
-//Synth(\audio);
+Synth(\audio);
