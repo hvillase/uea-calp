@@ -1,6 +1,6 @@
-// sintes audio
-// 1 cargar sonidos en un buffer
-// 2 colocar la ruta donde está tu sonido para que funcione
+// Sintes de audio
+// 1 cargar un sonido en un buffer
+// 2 colocar la ruta de donde está tu sonido
 
 s.boot;
 
@@ -18,3 +18,5 @@ SynthDef(\audio, {|rate=1, sp=0, at=0.001, sus=1, rel=0.001, pan=0, amp=1, out=0
 );
 
 Synth(\audio);
+
+s.quit;
