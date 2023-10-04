@@ -64,6 +64,9 @@
 
 Pbindef(\sec, \freq, Pseq([300, 400, 800, 790, Pn(350, 4), Pseq([400, 500, 470, 750], 3)].pyramid, inf));
 Pbindef(\sec4, \dur, Pseq([0.375, 0.125, 0.5, 0.5, 0.5], inf), \freq, Pseq([300, 375, Pn(300, 3)], inf));
+
+// modificación de efectos
+~rev.set(\mix, 0.5, \room, 0.5, \damp, 0.5);
 ~dly.set(\dt, 0.25, \dct, 1.1, \out, 0);
 
 ~sec1.stop;

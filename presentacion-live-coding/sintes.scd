@@ -3,6 +3,7 @@
 
 s.boot;
 
+// 1 activar los sintes y luego ir abajo al paso 2 para activar efectos
 (
 
 // --- Onda sinuidal (sine)
@@ -124,4 +125,13 @@ SynthDef(\bpf, {|in = 17, cfb = 1000, rq = 1, gate = 1, out = 0|
 }).add
 );
 
+);
+
+// 2 activar efectos
+(
+~rev=Synth(\rev); // 9 Reverberación
+~dly=Synth(\dly); // 11 Delay
+~lpf=Synth(\lpf); // 13 Low Pass Filter
+~hpf=Synth(\hpf); // 15 High Pass Filter
+~bpf=Synth(\bpf); // 17 Band Pass Filter
 );
