@@ -1,9 +1,9 @@
 // Secuencias
 
 // Para cambiar el tempo
-//
+TempoClock.tempo=120/60
 
-(// puede comentar esta línea depués de declarar las secuencias para declarar individualmente
+//(// puede comentar esta línea depués de declarar las secuencias para declarar individualmente
 (
 ~sec1 = Pdef(\sec, Pbind(\instrument, \pulse,
 	\dur, Pseq([0.5, 0.25, 0.25, Pn(0.125, 4), 1], inf),
@@ -29,7 +29,7 @@
 	\dur, 0.125,
 	\amp, Pseq([0.01, 0.02, 0.15, 0.01, 0.03, 0.02, 0.15, 0.01, Pseq([0.1, 0.12, 0.01, 0.15], 2)], inf),
 	\at, 0.001, \rel, 0.1,
-	\out, 0
+	\out, 17
 ))
 );
 
@@ -37,7 +37,7 @@
 ~sec4 = Pdef(\sec4, Pbind(\instrument, \sine,
 	\dur, 0.5,
 	\amp, 0.7,
-	\freq, 300,
+	\freq, 280,
 	\at, 0.01, \rel, 0.01,
 	\out, 0
 ))
