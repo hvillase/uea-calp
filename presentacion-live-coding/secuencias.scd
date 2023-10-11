@@ -3,14 +3,14 @@
 // Para cambiar el tempo
 TempoClock.tempo=120/60
 
-//(// puede comentar esta línea depués de declarar las secuencias para declarar individualmente
+(// puede comentar esta línea depués de declarar las secuencias para declarar individualmente
 (
 ~sec1 = Pdef(\sec, Pbind(\instrument, \pulse,
 	\dur, Pseq([0.5, 0.25, 0.25, Pn(0.125, 4), 1], inf),
 	\amp, 0.12,
 	\freq, Pseq([300, 400, 800, 790, Pn(350, 4), Pseq([400, 800, 400, 450], 3)], inf),
 	\rel, 0.09,
-	\out, 0
+	\out, 11
 ))
 );
 
@@ -67,7 +67,10 @@ Pbindef(\sec4, \dur, Pseq([0.375, 0.125, 0.5, 0.5, 0.5], inf), \freq, Pseq([300,
 
 // modificación de efectos
 ~rev.set(\mix, 0.5, \room, 0.5, \damp, 0.5);
-~dly.set(\dt, 0.25, \dct, 1.1, \out, 0);
+~dly.set(\dt, 0.25, \dct, 2.1, \out, 0);
+~lpf.set(\cfl, 100);
+~hpf.set(\cfh, 1000);
+~bpf.set(\cfb, 1000);
 
 ~sec1.stop;
 ~sec2.stop;
