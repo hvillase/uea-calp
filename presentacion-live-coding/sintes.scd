@@ -63,9 +63,9 @@ SynthDef(\wnoise, {|pan=0, at=0.01, rel=0.1, amp=0.5, out=0|
 
 // --- onda sinuidal con envolvente de frecuencia
 (
-SynthDef(\sine2, {|frec=440, pan=0, at=0.01, rel=0.1, amp=0.5, out=0|
+SynthDef(\sine2, {|freq=440, pan=0, at=0.01, rel=0.1, amp=0.5, out=0|
 	var sen, paneo, env;
-	sen=EnvGen.kr(Env.new([frec, frec * 1.02, frec * 1.12, frec], [0.1, 0.1, 3]), doneAction:0);
+	sen=EnvGen.kr(Env.new([freq, freq * 1.02, freq * 1.12, freq], [0.1, 0.1, 3]), doneAction:0);
 	sen=SinOsc.ar(sen, 0, amp);
 	paneo=Pan2.ar(sen, pan);
 	env=EnvGen.kr(Env.new([0,1,0], [at, rel]), doneAction:2);
