@@ -4,7 +4,11 @@
 
 s.boot;
 
+// Linux
 b = Buffer.read(s, "/home/hernani/uea-calp/clase-6/media/sonido2.wav");
+
+// Mac
+// b = Buffer.read(s, "/Users/name/Desktop/folder/sonido2.wav");
 
 (
 SynthDef(\audio, {|rate=1, sp=0, at=0.001, sus=1, rel=0.001, pan=0, amp=1, out=0|

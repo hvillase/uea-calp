@@ -1,9 +1,9 @@
 // Secuencias
 
 // Para cambiar el tempo
-TempoClock.tempo=120/60
+TempoClock.tempo=60/60;
 
-(// puede comentar esta línea depués de declarar las secuencias para declarar individualmente
+// puede comentar esta línea depués de declarar las secuencias para declarar individualmente
 (
 ~sec1 = Pdef(\sec, Pbind(\instrument, \pulse,
 	\dur, Pseq([0.5, 0.25, 0.25, Pn(0.125, 4), 1], inf),
@@ -62,15 +62,17 @@ TempoClock.tempo=120/60
 ~sec4.play.quant(4);
 ~son1.play.quant(4);
 
-Pbindef(\sec, \freq, Pseq([300, 400, 800, 790, Pn(350, 4), Pseq([400, 500, 470, 750], 3)].pyramid, inf));
-Pbindef(\sec4, \dur, Pseq([0.375, 0.125, 0.5, 0.5, 0.5], inf), \freq, Pseq([300, 375, Pn(300, 3)], inf));
+Pbindef(\sec, \freq, Pseq([300, 400, 800, 790, Pn(350, 4), Pseq([400, Pn(800, 3), 470, 750], 3)].pyramid, inf));
+Pbindef(\sec, \dur, 0.125, \freq, Pseq([400, 200, 300, 500, 550, 600, 200, 700].pyramid, inf), \rel, Prand([0.03, 0.02, 0.04, 0.09], inf), \amp, 0.1);
+
+Pbindef(\sec4, \dur, Pseq([0.375, 0.125, 0.5, 0.5, 0.5], inf), \freq, Pseq([300, 375, Pn(300, 3), 400, 350], inf));
 
 // modificación de efectos
 ~rev.set(\mix, 0.5, \room, 0.5, \damp, 0.5);
-~dly.set(\dt, 0.25, \dct, 2.1, \out, 0);
+~dly.set(\dt, 0.25, \dct, 6, \out, 0);
 ~lpf.set(\cfl, 100);
-~hpf.set(\cfh, 1000);
-~bpf.set(\cfb, 1000);
+~hpf.set(\cfh, 700);
+~bpf.set(\cfb, 3000);
 
 ~sec1.stop;
 ~sec2.stop;
